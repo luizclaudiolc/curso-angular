@@ -7,7 +7,7 @@ export const HEROES: IHero[] = [
   },
   {
     id: 1,
-    name: 'He-Man'
+    name: 'SuperMan'
   },
   {
     id: 2,

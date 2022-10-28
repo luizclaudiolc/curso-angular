@@ -1,23 +1,42 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { IHero } from '../hero.model';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
   selectedHero?: IHero;
-  heroes = HEROES;
+  heroes: IHero[] = [];
 
-  constructor() { }
+  constructor(
+    private heroService: HeroService,
+    private messegeService: MessageService
+  ) {}
 
   ngOnInit(): void {
-    console.log();
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService
+      .getHeroes()
+      .pipe(
+        tap({
+          next: (heroes) => {
+            this.heroes = heroes;
+          },
+        })
+      )
+      .subscribe();
   }
 
   onSelect(hero: IHero): void {
     this.selectedHero = hero;
+    this.messegeService.add(`HeroComponent: seleted hero id: ${hero.id}`)
   }
 }
