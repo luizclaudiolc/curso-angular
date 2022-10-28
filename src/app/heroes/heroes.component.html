@@ -6,25 +6,10 @@
     (click)="onSelect(hero)"
     [class.selected]="hero === selectedHero"
   >
-    <span>
+    <!-- <span>
       {{ hero.id }}
-    </span>
+    </span> -->
     {{ hero.name }}
   </li>
 </ul>
-
-<ng-container *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }}</h2>
-  <div><span>id: </span>{{ selectedHero.id }}</div>
-  <div><span>Nome: </span>{{ selectedHero.name }}</div>
-
-  <div>
-    <label for="name">Hero name:</label>
-    <input
-      type="text"
-      name="name"
-      id="hero-name"
-      [(ngModel)]="selectedHero.name"
-    />
-  </div>
-</ng-container>
+<app-heroes-details [hero]="selectedHero"></app-heroes-details>
