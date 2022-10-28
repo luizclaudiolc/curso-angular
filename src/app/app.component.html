@@ -1,9 +1,29 @@
 <mat-toolbar color="primary">
-  <span>
+  <span
+    class="app-name"
+    routerLink="/dashboard"
+  >
     {{ title }}
   </span>
+  <span fxFlex></span>
+  <button
+    mat-icon-button
+    aria-label="Heroes list"
+    routerLink="/heroes"
+    matTooltip="Navegar para Lista de Hérois"
+  >
+    <mat-icon>sports_martial_arts</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    aria-label="Dashboard"
+    routerLink="/dashboard"
+    matTooltip="Dashboard"
+  >
+    <mat-icon>dashboard</mat-icon>
+  </button>
 </mat-toolbar>
-<div class="content">
-  <app-heroes></app-heroes>
+<div class="content" fxLayoutGap="10px">
+  <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>

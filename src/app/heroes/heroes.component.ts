@@ -34,9 +34,4 @@ export class HeroesComponent implements OnInit {
       )
       .subscribe();
   }
-
-  onSelect(hero: IHero): void {
-    this.selectedHero = hero;
-    this.messegeService.add(`HeroComponent: seleted hero id: ${hero.id}`)
-  }
 }

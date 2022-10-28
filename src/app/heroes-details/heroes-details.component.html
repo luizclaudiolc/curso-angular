@@ -1,6 +1,5 @@
 <div *ngIf="hero">
-  <h2>{{ hero.name | uppercase }}</h2>
-  <!-- <div><span>id: </span>{{ hero.id }}</div> -->
+  <h1>{{ hero.name | uppercase }}</h1>
   <div><span>Nome: </span>{{ hero.name }}</div>
 
   <div>
@@ -12,4 +11,6 @@
       [(ngModel)]="hero.name"
     />
   </div>
+
+  <button mat-raised-button (click)="goBack()">Voltar</button>
 </div>
