@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroesDetailsComponent } from './heroes-details/heroes-details.component';
+
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HeroesComponent } from './pages/heroes/heroes.component';
+import { HeroesDetailsComponent } from './shared/heroes-details/heroes-details.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -15,11 +16,11 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'heroes',
+    path: 'list',
     component: HeroesComponent
   },
   {
-    path: 'heroes/:id',
+    path: 'list/:id',
     component: HeroesDetailsComponent
   },
 ];

@@ -1,0 +1,26 @@
+
+<mat-toolbar color="primary" class="mat-elevation-{{ elevation }}">
+  <span
+    class="app-name"
+    routerLink="/dashboard"
+  >
+    Tour of Heroes
+  </span>
+  <span fxFlex></span>
+  <button
+    mat-icon-button
+    aria-label="Heroes list"
+    routerLink="/list"
+    matTooltip="Navegar para Lista de Hérois"
+  >
+    <mat-icon>sports_martial_arts</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    aria-label="Dashboard"
+    routerLink="/dashboard"
+    matTooltip="Dashboard"
+  >
+    <mat-icon>dashboard</mat-icon>
+  </button>
+</mat-toolbar>

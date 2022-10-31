@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+  <mat-card>
+    <mat-card-title>
+      {{ hero.name | uppercase }}
+    </mat-card-title>
+    <ng-container *ngIf="hero.img">
+      <img [src]="hero.img" alt="{{ hero.name }}" />
+    </ng-container>
+    <mat-card-content>
+      {{ hero.description }}
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button (click)="goBack()">Voltar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

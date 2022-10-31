@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
-import { IHero } from '../hero.model';
-import { HeroService } from '../hero.service';
+import { IHero } from 'src/app/hero.model';
+import { HeroService } from 'src/app/hero.service';
+
 
 @Component({
   selector: 'app-dashboard',

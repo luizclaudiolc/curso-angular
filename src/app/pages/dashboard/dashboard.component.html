@@ -6,7 +6,7 @@
   fxLayoutGap="12px"
   fxLayoutAlign="space-between"
 >
-  <mat-card class="card-hero" *ngFor="let hero of heroes" routerLink="/heroes/{{hero.id}}">
+  <mat-card class="card-hero" *ngFor="let hero of heroes" routerLink="/list/{{hero.id}}">
     <mat-card-title>{{ hero.name }}</mat-card-title>
   </mat-card>
 </div>

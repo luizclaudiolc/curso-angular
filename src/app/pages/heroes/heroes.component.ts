@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
-import { IHero } from '../hero.model';
-import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
+import { IHero } from 'src/app/hero.model';
+import { HeroService } from 'src/app/hero.service';
+
 
 @Component({
   selector: 'app-heroes',
@@ -10,12 +10,11 @@ import { MessageService } from '../message.service';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  selectedHero?: IHero;
   heroes: IHero[] = [];
+  matHeaderRowDef = ['id', 'name'];
 
   constructor(
     private heroService: HeroService,
-    private messegeService: MessageService
   ) {}
 
   ngOnInit(): void {

@@ -2,8 +2,8 @@ import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs';
-import { IHero } from '../hero.model';
-import { HeroService } from '../hero.service';
+import { IHero } from '../../hero.model';
+import { HeroService } from '../../hero.service';
 
 @Component({
   selector: 'app-heroes-details',
@@ -27,11 +27,11 @@ export class HeroesDetailsComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id).pipe(
       tap({
-        next: (hero) => {
+        next: (hero: IHero) => {
           this.hero = hero
         },
       })
-    ).subscribe()
+    ).subscribe();
   }
 
   goBack(): void {
