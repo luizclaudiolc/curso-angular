@@ -2,8 +2,9 @@ import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs';
-import { IHero } from '../../hero.model';
-import { HeroService } from '../../hero.service';
+import { IHero } from 'src/app/core/models/hero.model';
+import { HeroService } from 'src/app/core/services/hero.service';
+
 
 @Component({
   selector: 'app-heroes-details',

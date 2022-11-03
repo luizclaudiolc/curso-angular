@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
-import { IHero } from 'src/app/hero.model';
-import { HeroService } from 'src/app/hero.service';
+import { IHero } from 'src/app/core/models/hero.model';
+import { HeroService } from '../core/services/hero.service';
 
 
 @Component({

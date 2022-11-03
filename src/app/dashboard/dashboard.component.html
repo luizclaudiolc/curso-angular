@@ -1,0 +1,20 @@
+<h1>Dashboard</h1>
+
+<div class="container">
+  <mat-card
+    class="card-hero mat-elevation-z8"
+    *ngFor="let hero of heroes"
+    routerLink="/list/{{ hero.id }}"
+    matTooltip="Ver detalhes de {{ hero.name }}"
+    matTooltipPosition="above"
+  >
+    <mat-card-title-group>
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+      <img mat-card-sm-image class="imagem" [src]="hero.img" />
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ hero.description }}
+    </mat-card-content>
+  </mat-card>
+</div>

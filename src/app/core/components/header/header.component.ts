@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IMenuItems } from '../../models/menu-items.model';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input('elevation') elevation?: 'z2' | 'z8'
+  @Input('title') title: string = '';
+  @Input('menu-items') menuItems: IMenuItems[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log();
+    console.log(this.menuItems);
   }
 
 }

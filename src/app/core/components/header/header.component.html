@@ -4,23 +4,24 @@
     class="app-name"
     routerLink="/dashboard"
   >
-    Tour of Heroes
+    {{ title }}
   </span>
   <span fxFlex></span>
   <button
+    *ngFor="let item of menuItems"
     mat-icon-button
     aria-label="Heroes list"
-    routerLink="/list"
-    matTooltip="Navegar para Lista de Hérois"
+    [routerLink]="item.link"
+    [matTooltip]="item.tooltipText"
   >
-    <mat-icon>sports_martial_arts</mat-icon>
+    <mat-icon>{{ item.icon }}</mat-icon>
   </button>
-  <button
+  <!-- <button
     mat-icon-button
     aria-label="Dashboard"
     routerLink="/dashboard"
     matTooltip="Dashboard"
   >
     <mat-icon>dashboard</mat-icon>
-  </button>
+  </button> -->
 </mat-toolbar>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IMenuItems } from './core/models/menu-items.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heros';
+  menuItems: IMenuItems[] = [
+    {
+      icon: 'dashboard',
+      link: '/dashboard',
+      tooltipText: 'Dashboard',
+    },
+    {
+      icon: 'sports_martial_arts',
+      link: '/list',
+      tooltipText: 'List of heroes',
+    },
+  ];
 }
