@@ -48,6 +48,6 @@ export const HEROES: IHero[] = [
     id: 6,
     name: 'Mulher Maravilha',
     description: `Wonder Woman is a superheroine created by the American psychologist and writer William Moulton Marston, and artist Harry G. Peter. Marston's wife, Elizabeth, and their life partner, Olive Byrne, are credited as being his inspiration for the character's appearance.`,
-    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Ffullcirclecinema.com%2Fwp-content%2Fuploads%2F2019%2F04%2F3403685-gsu_news_ww84_20180618.jpg%3Fresize%3D960%252C640%26ssl%3D1&f=1&nofb=1&ipt=9936ca628e7a5f9f8a4b1ed57ba040bd7a1aa962627a8d0149de7ed44d98b833&ipo=images'
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Ffullcirclecinema.com%2Fwp-content%2Fuploads%2F2019%2F04%2F3403685-gsu_news_ww84_20180618.jpg%3Fresize%3D960%252C640%26ssl%3D1&f=1&nofb=1&ipt=9936ca628e7a5f9f8a4b1ed57ba040bd7a1aa962627a8d0149de7ed44d98b833&ipo=images',
   },
 ];
