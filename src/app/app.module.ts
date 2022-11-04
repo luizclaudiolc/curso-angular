@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NotFoundModule } from './core/components/not-found/not-found.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]

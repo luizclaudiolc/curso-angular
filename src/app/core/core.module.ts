@@ -1,19 +1,19 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+
 import { MaterialModule } from '../material/material.module';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const components = [HeaderComponent];
-
-const modules = [FlexLayoutModule, MaterialModule, RouterModule];
+const angularModules = [CommonModule];
+const matModules = [FlexLayoutModule, MaterialModule, RouterModule];
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, ...modules],
-  exports: [...components, ...modules],
+  imports: [...angularModules, ...matModules],
+  exports: [...components, ...matModules],
 })
 export class CoreModule {
   // *** Esse código serve para impedir que Coremodule seja importado em outro lugar que não seja o appModule *** //
